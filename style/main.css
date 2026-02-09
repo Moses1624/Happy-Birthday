@@ -252,3 +252,61 @@ p {
   background: radial-gradient(circle at center, rgba(255,255,255,0.06), transparent 70%);
   pointer-events: none;
 }
+/* ================= HERO PHOTO ================= */
+
+.hero-photo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero-photo img {
+  width: min(320px, 85%);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hat alignment */
+.hero-photo .hat {
+  position: absolute;
+  width: clamp(40px, 8vw, 80px);
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ================= GRID GALLERY ================= */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 10px 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Hover effect */
+.photo-grid img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 30px rgba(90,180,255,0.5);
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 600px) {
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
