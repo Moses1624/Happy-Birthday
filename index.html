@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Romantic Birthday Film</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday ❤️</title>
 
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="style.css" />
 
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-<!-- SweetAlert -->
+<!-- Sweet Alert -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
@@ -19,93 +18,56 @@
 <body>
 
 <audio class="song" loop>
-<source src="music/song.mp3">
+  <source src="./music/musicfinal1.mp3">
 </audio>
 
 <div class="container">
 
-<!-- Opening -->
-<div class="one">
-<h1>Hey My Love ❤️</h1>
-</div>
+  <div class="scene scene1">
+    <h1>Hi <span>Gomu ❤️</span></h1>
+    <p>Today is your special day...</p>
+  </div>
 
-<div class="two">
-<h1>Today is your special day 🎂</h1>
-</div>
+  <div class="scene scene2">
+    <h2>I made something for you...</h2>
+  </div>
 
-<!-- Message -->
-<div class="three">
-<h2>You make my world brighter ✨</h2>
-</div>
+  <div class="scene scene3">
+    <p class="letter">
+      Happy Birthday to the bravest girl I know.
+      I’m proud of the person you are becoming.
+      I’ll always stand beside you ❤️
+    </p>
+  </div>
 
-<!-- Love Letter -->
-<div class="four">
-<div class="text-box">
-<p>Every moment with you is magical.  
-I am grateful for you every single day 💕</p>
-</div>
-</div>
+  <div class="scene scene4">
 
-<!-- Romantic Thoughts -->
-<div class="five">
-<p>You are my happiness 💖</p>
-<p>You are my peace 🌸</p>
-<p>You are my forever 🌹</p>
-</div>
+    <img src="./img/photo1.jpg" class="hero">
 
-<!-- Hero Image -->
-<div class="six">
-<img src="img/profile.jpg" class="profile-picture">
-</div>
+    <h2 class="wish">Happy Birthday Gomu ❤️</h2>
 
-<!-- 🎞 Memory Polaroids -->
-<div class="ten">
-<h2 class="memories-title">Our Beautiful Memories</h2>
+  </div>
 
-<div class="polaroid-gallery">
+  <!-- Polaroid Photos -->
+  <div class="scene scene5">
 
-<div class="polaroid">
-<img src="img/photo1.jpg">
-<p>Our first beautiful moment 💫</p>
-</div>
+    <div class="polaroid"><img src="./img/photo1.jpg"><p>Memory 1</p></div>
+    <div class="polaroid"><img src="./img/photo2.jpg"><p>Memory 2</p></div>
+    <div class="polaroid"><img src="./img/photo3.jpg"><p>Memory 3</p></div>
+    <div class="polaroid"><img src="./img/photo4.jpg"><p>Memory 4</p></div>
+    <div class="polaroid"><img src="./img/photo5.jpg"><p>Memory 5</p></div>
 
-<div class="polaroid">
-<img src="img/photo2.jpg">
-<p>Smiles that mean everything 😊</p>
-</div>
+  </div>
 
-<div class="polaroid">
-<img src="img/photo3.jpg">
-<p>Moments I treasure 💕</p>
-</div>
-
-<div class="polaroid">
-<img src="img/photo4.jpg">
-<p>Love captured forever 📸</p>
-</div>
-
-<div class="polaroid">
-<img src="img/photo5.jpg">
-<p>You + Me = Forever ❤️</p>
-</div>
-
-</div>
-</div>
-
-<!-- Birthday Wish -->
-<div class="wish">
-<h1 class="wish-hbd">
-<span>H</span><span>A</span><span>P</span><span>P</span><span>Y</span>
-<span>B</span><span>I</span><span>R</span><span>T</span><span>H</span><span>D</span><span>A</span><span>Y</span>
-</h1>
-<h5>May all your dreams come true 🎉</h5>
-</div>
-
-<button id="replay">Replay ❤️</button>
+  <div class="scene scene6">
+    <h2>Forever grateful for you ❤️</h2>
+    <p id="replay">Click to replay</p>
+  </div>
 
 </div>
 
-<script src="script.js"></script>
+<script src="script/main.js"></script>
+
 
 </body>
 </html>
