@@ -9,6 +9,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* Hide audio control */
@@ -16,6 +17,7 @@ body {
   visibility: hidden;
 }
 
+/* ---------- CONTAINER ---------- */
 .container {
   min-height: 100vh;
   margin: 0 auto;
@@ -23,38 +25,38 @@ body {
   position: relative;
   text-align: center;
   visibility: hidden;
-  width: 100vw;
+  width: 100%;
+  padding: 20px;
 }
 
+/* Prevent layout breaking on mobile */
 .container > div {
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 20vh;
+  position: relative;
+  top: 0;
+  margin-top: 15vh;
 }
 
 /* ---------- TEXT ---------- */
 .one {
-  font-size: 4.5rem;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
 }
 
 .two {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: lighter;
 }
 
 .three {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
 /* ---------- CHAT BOX ---------- */
 .four .text-box {
-  border: 3px solid #aaa;
-  border-radius: 5px;
+  border-radius: 8px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
   position: relative;
-  width: 600px;
+  width: min(600px, 90%);
 }
 
 .text-box p {
@@ -68,30 +70,22 @@ body {
 
 .text-box .fake-btn {
   background-color: rgb(21, 161, 237);
-  border-radius: 3px;
-  bottom: -50px;
+  border-radius: 5px;
+  bottom: -45px;
   color: #fff;
   padding: .5rem 1rem;
   position: absolute;
-  right: 5px;
+  right: 10px;
 }
 
 /* ---------- IDEAS ---------- */
 .five p {
-  font-size: 2rem;
-  left: 0;
-  position: absolute;
-  right: 0;
-}
-
-.idea-3 strong {
-  border-radius: 3px;
-  display: inline-block;
-  padding: 3px 5px;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  position: relative;
 }
 
 .five .idea-5 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .idea-5 span,
@@ -101,40 +95,41 @@ body {
 }
 
 .idea-6 span {
-  font-size: 15rem;
+  font-size: clamp(4rem, 12vw, 15rem);
 }
 
 /* ---------- IMAGE ---------- */
 .six {
   position: relative;
-  top: 10vh;
-  z-index: 1;
+  margin-top: 40px;
 }
 
 .six img {
-  max-width: 100%;
+  max-width: min(320px, 85%);
   height: auto;
 }
 
 .six .hat {
-  left: 41%;
   position: absolute;
-  top: -35%;
-  width: 80px;
+  width: clamp(40px, 8vw, 80px);
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* ---------- BALLOONS ---------- */
 .baloons img {
-  display: inline-block;
   position: absolute;
+  width: clamp(30px, 6vw, 60px);
+  opacity: 0.9;
 }
 
 .baloons img:nth-child(even) {
-  left: -10%;
+  left: -5%;
 }
 
 .baloons img:nth-child(odd) {
-  right: -10%;
+  right: -5%;
 }
 
 .baloons img:nth-child(3n) {
@@ -150,30 +145,21 @@ body {
   width: 100vw;
 }
 
-.eight svg {
-  left: 0;
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  width: 25px;
-  z-index: -1;
-}
-
 /* ---------- WISH ---------- */
 .wish-hbd {
-  font-size: 3em;
+  font-size: clamp(1.6rem, 4vw, 3rem);
   margin: 0;
   text-transform: uppercase;
 }
 
 .wish h5 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: lighter;
   margin-top: 10px;
 }
 
 .nine p {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: lighter;
 }
 
@@ -183,92 +169,15 @@ body {
 }
 
 /* ======================================================
-   TABLET
-====================================================== */
-@media (max-width: 900px) {
-
-  .four .text-box {
-    width: 90%;
-  }
-
-  .idea-6 span {
-    font-size: 10rem;
-  }
-
-  .six .hat {
-    width: 50px;
-  }
-
-  .wish-hbd {
-    font-size: 2.2rem;
-  }
-
-  .wish h5 {
-    font-size: 1.4rem;
-  }
-
-  .nine p {
-    font-size: 1.5rem;
-  }
-}
-
-/* ======================================================
-   MOBILE
-====================================================== */
-@media (max-width: 768px) {
-
-  body {
-    padding: 10px;
-  }
-
-  .container {
-    width: 100%;
-    margin: auto;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .six img {
-    max-width: 80%;
-  }
-
-  .six .hat {
-    width: 60px;
-    top: -20%;
-    left: 35%;
-  }
-
-  .text-box {
-    width: 95%;
-    word-wrap: break-word;
-  }
-
-  .baloons img {
-    width: 35px;
-  }
-}
-/* ======================================================
-   BLUE GLOW THEME + STARFALL + COLOR SHIFT
-   (ADD AT END OF FILE)
+   BLUE GLOW THEME + EFFECTS
 ====================================================== */
 
-/* 🌊 Animated blue gradient background */
+/* 🌊 Animated blue gradient */
 body {
   background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
   background-size: 400% 400%;
   animation: gradientShift 25s ease infinite;
-  color: #ffffff;
+  color: white;
 }
 
 @keyframes gradientShift {
@@ -277,7 +186,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* ✨ Soft glow on main text */
+/* ✨ Glow text */
 h1, h3, .wish-hbd {
   text-shadow: 0 0 18px rgba(180, 220, 255, 0.35);
 }
@@ -286,26 +195,22 @@ p {
   color: #eaf4ff;
 }
 
-/* 🪟 Glassmorphism chat box */
+/* Glass Chat Box */
 .four .text-box {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(12px);
 }
 
-/* 🔵 Button glow */
+/* Button glow */
 .fake-btn {
   box-shadow: 0 0 18px rgba(90, 180, 255, 0.9);
 }
 
-/* 💫 Image glow + float */
-.six img {
-  filter: drop-shadow(0 25px 30px rgba(0,0,0,0.5));
-  animation: float 6s ease-in-out infinite;
-}
-
+/* Floating animation */
+.six img,
 .wish {
-  animation: float 7s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -314,7 +219,7 @@ p {
   100% { transform: translateY(0); }
 }
 
-/* 🌠 STARFALL EFFECT */
+/* 🌠 STARFALL */
 .container::before {
   content: "";
   position: fixed;
@@ -334,13 +239,12 @@ p {
   to { transform: translateY(100vh); }
 }
 
-/* 🎈 Balloons themed to blue glow */
+/* Balloon blue theme */
 .baloons img {
   filter: hue-rotate(190deg) saturate(140%) brightness(110%);
-  opacity: 0.9;
 }
 
-/* 🌌 Subtle ambient overlay */
+/* Ambient glow overlay */
 .container::after {
   content: "";
   position: fixed;
