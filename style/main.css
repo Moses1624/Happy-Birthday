@@ -1,107 +1,78 @@
-body {
-margin: 0;
-font-family: 'Poppins', sans-serif;
-background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-overflow-x: hidden;
+body{
+margin:0;
+font-family:Poppins, sans-serif;
+background:linear-gradient(120deg,#1e1e2f,#2c2c54);
+color:white;
+overflow:hidden;
 }
 
-.container {
-text-align: center;
-padding: 50px 20px;
+.container{
+visibility:hidden;
+height:100vh;
+text-align:center;
+position:relative;
 }
 
-.one, .two, .three {
-font-size: 2rem;
-margin: 40px 0;
-color: white;
-text-shadow: 0 0 10px pink;
+.scene{
+position:absolute;
+width:100%;
+top:35%;
+opacity:0;
 }
 
-.text-box {
-background: white;
-padding: 25px;
-border-radius: 15px;
-width: 70%;
-margin: auto;
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+h1{
+font-size:4rem;
 }
 
-.five p {
-font-size: 1.6rem;
-color: white;
-margin: 20px;
+h2{
+font-size:3rem;
 }
 
-.profile-picture {
-width: 280px;
-border-radius: 20px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+p{
+font-size:1.5rem;
+max-width:700px;
+margin:auto;
 }
 
-/* POLAROIDS */
-
-.ten {
-padding: 60px 20px;
+.hero{
+width:280px;
+border-radius:15px;
+box-shadow:0 0 30px rgba(255,105,180,0.5);
 }
 
-.memories-title {
-color: white;
-font-size: 2.3rem;
-margin-bottom: 40px;
+/* ❤️ Polaroid */
+
+.scene5{
+top:15%;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
 }
 
-.polaroid-gallery {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 30px;
+.polaroid{
+background:white;
+color:black;
+padding:10px;
+width:150px;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+transform:rotate(-5deg);
 }
 
-.polaroid {
-background: white;
-padding: 15px;
-width: 220px;
-box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-transform: rotate(-3deg);
-transition: 0.4s;
+.polaroid img{
+width:100%;
 }
 
-.polaroid:nth-child(even) {
-transform: rotate(3deg);
+.polaroid:nth-child(even){
+transform:rotate(5deg);
 }
 
-.polaroid:hover {
-transform: scale(1.08) rotate(0deg);
+#wish{
+color:#ff69b4;
 }
 
-.polaroid img {
-width: 100%;
-height: 220px;
-object-fit: cover;
-}
-
-.polaroid p {
-margin-top: 10px;
-font-family: cursive;
-}
-
-/* Wish */
-
-.wish-hbd span {
-font-size: 2.5rem;
-color: white;
-}
-
-#wish h5 {
-color: white;
-}
-
-button {
-margin-top: 40px;
-padding: 12px 25px;
-font-size: 16px;
-border: none;
-background: white;
-border-radius: 20px;
-cursor: pointer;
+#replay{
+cursor:pointer;
+margin-top:30px;
+color:#ff69b4;
 }
