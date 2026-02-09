@@ -258,3 +258,93 @@ body {
     width: 35px;
   }
 }
+/* ======================================================
+   BLUE GLOW THEME + STARFALL + COLOR SHIFT
+   (ADD AT END OF FILE)
+====================================================== */
+
+/* 🌊 Animated blue gradient background */
+body {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientShift 25s ease infinite;
+  color: #ffffff;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Soft glow on main text */
+h1, h3, .wish-hbd {
+  text-shadow: 0 0 18px rgba(180, 220, 255, 0.35);
+}
+
+p {
+  color: #eaf4ff;
+}
+
+/* 🪟 Glassmorphism chat box */
+.four .text-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+/* 🔵 Button glow */
+.fake-btn {
+  box-shadow: 0 0 18px rgba(90, 180, 255, 0.9);
+}
+
+/* 💫 Image glow + float */
+.six img {
+  filter: drop-shadow(0 25px 30px rgba(0,0,0,0.5));
+  animation: float 6s ease-in-out infinite;
+}
+
+.wish {
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* 🌠 STARFALL EFFECT */
+.container::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 30% 80%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 70% 40%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.5), transparent);
+  animation: starMove 18s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes starMove {
+  from { transform: translateY(-100px); }
+  to { transform: translateY(100vh); }
+}
+
+/* 🎈 Balloons themed to blue glow */
+.baloons img {
+  filter: hue-rotate(190deg) saturate(140%) brightness(110%);
+  opacity: 0.9;
+}
+
+/* 🌌 Subtle ambient overlay */
+.container::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.06), transparent 70%);
+  pointer-events: none;
+}
