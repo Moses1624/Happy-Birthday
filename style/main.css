@@ -1,292 +1,107 @@
-html {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-}
-
-.song {
-  visibility: hidden;
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+overflow-x: hidden;
 }
 
 .container {
-  height: 100vh;
-  margin: 0 auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: relative;
-  text-align: center;
-  visibility: hidden;
-  width: 100vw;
+text-align: center;
+padding: 50px 20px;
 }
 
-.container > div {
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 20vh;
+.one, .two, .three {
+font-size: 2rem;
+margin: 40px 0;
+color: white;
+text-shadow: 0 0 10px pink;
 }
 
-.one {
-  font-size: 4.5rem;
-}
-
-.two {
-  font-size: 1.2rem;
-  font-weight: lighter;
-}
-
-.three {
-  font-size: 3rem;
-}
-
-.four .text-box {
-  border: 3px solid #aaa;
-  border-radius: 5px;
-  margin: 0 auto;
-  padding: 10px;
-  position: relative;
-  width: 600px;
-}
-
-.text-box p {
-  margin: 0;
-  text-align: left;
-}
-
-.text-box span {
-  visibility: hidden;
-}
-
-.text-box .fake-btn {
-  background-color: rgb(21, 161, 237);
-  border-radius: 3px;
-  bottom: -50px;
-  color: #fff;
-  padding: .5rem 1rem;
-  position: absolute;
-  right: 5px;
+.text-box {
+background: white;
+padding: 25px;
+border-radius: 15px;
+width: 70%;
+margin: auto;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .five p {
-  font-size: 2rem;
-  left: 0;
-  position: absolute;
-  right: 0;
+font-size: 1.6rem;
+color: white;
+margin: 20px;
 }
 
-.idea-3 strong {
-  border-radius: 3px;
-  display: inline-block;
-  padding: 3px 5px;
+.profile-picture {
+width: 280px;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.five .idea-5 {
-  font-size: 4rem;
-}
-
-.idea-5 span,
-.idea-6 span,
-.wish-hbd span {
-  display: inline-block;
-}
-
-.idea-6 span {
-  font-size: 15rem;
-}
-
-.six {
-  position: relative;
-  top: 10vh;
-  z-index: 1;
-}
-
-.six img {
-  display: inline-block;
-  height: 350px;
-  max-width: 100%;
-}
-
-.six .hat {
-  left: 41.5%;
-  position: absolute;
-  top: -35%;
-  width: 80px;
-}
-
-.baloons img {
-  display: inline-block;
-  position: absolute;
-}
-
-.baloons img:nth-child(even) {
-  left: -10%;
-}
-
-.baloons img:nth-child(odd) {
-  right: -10%;
-}
-
-.baloons img:nth-child(3n + 0) {
-  left: 30%;
-}
-
-.seven,
-.eight {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-}
-
-.eight svg {
-  left: 0;
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  width: 25px;
-  z-index: -1;
-}
-
-.wish-hbd {
-  font-size: 3em;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.wish h5 {
-  font-size: 2rem;
-  font-weight: lighter;
-  margin: 10px 0 0;
-}
-
-.nine p {
-  font-size: 2rem;
-  font-weight: lighter;
-}
-
-#replay {
-  cursor: pointer;
-  z-index: 3;
-}
-
-/* ================= POLAROID MEMORIES ================= */
+/* POLAROIDS */
 
 .ten {
-  min-height: 100vh;
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #ffe6eb, #fff);
-  position: relative;
-  z-index: 2;
+padding: 60px 20px;
 }
 
 .memories-title {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #ff4d6d;
+color: white;
+font-size: 2.3rem;
+margin-bottom: 40px;
 }
 
 .polaroid-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
 }
 
 .polaroid {
-  background: #fff;
-  padding: 15px 15px 40px;
-  width: 220px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  transform: rotate(-3deg);
-  transition: all 0.3s ease;
-  animation: floatPhoto 4s ease-in-out infinite;
+background: white;
+padding: 15px;
+width: 220px;
+box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+transform: rotate(-3deg);
+transition: 0.4s;
 }
 
 .polaroid:nth-child(even) {
-  transform: rotate(3deg);
+transform: rotate(3deg);
 }
 
 .polaroid:hover {
-  transform: scale(1.08) rotate(0deg);
+transform: scale(1.08) rotate(0deg);
 }
 
 .polaroid img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 4px;
+width: 100%;
+height: 220px;
+object-fit: cover;
 }
 
 .polaroid p {
-  margin-top: 12px;
-  font-size: 15px;
-  font-family: cursive;
-  color: #444;
+margin-top: 10px;
+font-family: cursive;
 }
 
-@keyframes floatPhoto {
-  0% {
-    transform: translateY(0px) rotate(-3deg);
-  }
+/* Wish */
 
-  50% {
-    transform: translateY(-10px) rotate(-3deg);
-  }
-
-  100% {
-    transform: translateY(0px) rotate(-3deg);
-  }
+.wish-hbd span {
+font-size: 2.5rem;
+color: white;
 }
 
-/* ================= MOBILE ================= */
+#wish h5 {
+color: white;
+}
 
-@media screen and (max-width: 500px) {
-  .container {
-    width: 90%;
-  }
-
-  .four .text-box {
-    width: 90%;
-  }
-
-  .text-box .fake-btn {
-    bottom: -38px;
-  }
-
-  .idea-6 span {
-    font-size: 10rem;
-  }
-
-  .six .hat {
-    width: 50px;
-  }
-
-  .wish-hbd {
-    font-size: 2.2em;
-  }
-
-  .wish h5 {
-    font-size: 1.4rem;
-  }
-
-  .nine p {
-    font-size: 1.5rem;
-  }
-
-  .polaroid {
-    width: 170px;
-  }
-
-  .polaroid img {
-    height: 170px;
-  }
-
-  .memories-title {
-    font-size: 1.8rem;
-  }
+button {
+margin-top: 40px;
+padding: 12px 25px;
+font-size: 16px;
+border: none;
+background: white;
+border-radius: 20px;
+cursor: pointer;
 }
