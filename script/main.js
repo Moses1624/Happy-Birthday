@@ -287,13 +287,22 @@ const animationTimeline = () => {
 document.getElementById("finalSecret").addEventListener("click", function () {
 
     Swal.fire({
-        title: "One Last Thing ❤️",
-        text: "I just want you to know… you are one of the most beautiful blessings in my life. I may not always say it perfectly, but I truly cherish you, care for you, and I am grateful for every moment with you.",
-        confirmButtonText: "Aww ❤️",
+        title: "The Birthday Wish 🤍",
+        text: `Happy Birthday Girl 🎂🎉 Just Wanted To Do Something For You 🤍 Hope You Liked It, And I Have A Lot Of Things To Say Of How You Have Always Been There 🤍 But If I Put In Words It Would Be A Disrespect Because Even If I Take All The 26 Alphabets And Try To Make Any Words Or Sentence Out Of It, That Would Still Not Be Enough To What You Are To Me 🤍
+
+Hope This Year Brings All The Joy And All The Things You've Wanted In Life 🎉🤍 And Never Forget You'll Always Have An Admirer At Your Corner No Matter What 🤍
+
+Happy Birthday Once Again 🎂🎉🤍`,
+        confirmButtonText: "Thank You🤍",
         background: "#0D1B3D",
         color: "#F8F8F8",
         confirmButtonColor: "#E6C068"
     }).then(() => {
+
+    });
+
+});
+
 
         // Show replay option AFTER secret message
         document.getElementById("replay").style.display = "block";
