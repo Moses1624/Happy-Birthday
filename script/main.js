@@ -313,10 +313,10 @@ document.getElementById("finalSecret").addEventListener("click", function () {
 
     });
 
+});
 
 
 
-        // Show replay option AFTER secret message
-        document.getElementById("replay").style.display = "block";
 
-    });
+
+ 
