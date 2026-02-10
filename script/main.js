@@ -271,3 +271,21 @@ const animationTimeline = () => {
         tl.restart();
     });
 }
+document.getElementById("finalSecret").addEventListener("click", function () {
+
+    Swal.fire({
+        title: "One Last Thing ❤️",
+        text: "I just want you to know… you are one of the most beautiful blessings in my life. I may not always say it perfectly, but I truly cherish you, care for you, and I am grateful for every moment with you.",
+        confirmButtonText: "Aww ❤️",
+        background: "#0D1B3D",
+        color: "#F8F8F8",
+        confirmButtonColor: "#E6C068"
+    }).then(() => {
+
+        // Show replay option AFTER secret message
+        document.getElementById("replay").style.display = "block";
+
+    });
+
+});
+
