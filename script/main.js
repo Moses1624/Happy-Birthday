@@ -321,6 +321,3 @@ document.getElementById("finalSecret").addEventListener("click", function () {
         document.getElementById("replay").style.display = "block";
 
     });
-
-});
-
