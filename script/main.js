@@ -313,7 +313,6 @@ document.getElementById("finalSecret").addEventListener("click", function () {
 
     });
 
-});
 
 
 
