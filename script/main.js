@@ -1,24 +1,37 @@
 
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
+
+    const audio = document.querySelector('.song');
+
     Swal.fire({
         title: 'Do you want to play music in the background?',
-        icon: 'warning',
+        icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes',
         cancelButtonText: 'No',
     }).then((result) => {
+
         if (result.isConfirmed) {
-            document.querySelector('.song').play();
+
+            if (audio) {
+                audio.currentTime = 0;
+                audio.muted = false;
+                audio.play().catch(err => {
+                    console.log("Audio blocked:", err);
+                });
+            }
+
             animationTimeline();
+
         } else {
             animationTimeline();
         }
+
     });
 });
-
 
 // animation timeline
 const animationTimeline = () => {
