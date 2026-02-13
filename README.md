@@ -33,5 +33,5 @@ If you have any ideas to make it more interesting, please submit a pull request 
 
 ### [MIT](LICENSE)
 
-> Github [@fajarghifar](https://github.com/Moses1624) &nbsp;&middot;&nbsp;
+> Github [@Moses1624](https://github.com/Moses1624) &nbsp;&middot;&nbsp;
 
